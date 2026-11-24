@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; background: #080A0F; }
+body { background: #080A0F; color: #F5F5F0; overflow-x: hidden; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+:focus-visible { outline: 2px solid #C6A66B; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; } }
+
+@layer components {
+  .btn { @apply inline-flex items-center gap-2 rounded-full border border-gold px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5; }
+  .btn-fill { @apply bg-gold text-[#0b0a07] hover:shadow-[0_0_34px_rgba(198,166,107,.38)]; }
+  .btn-ghost { @apply bg-transparent text-paper hover:bg-gold/10; }
+  .section { @apply relative py-20 md:py-28; }
+  .wrap { @apply mx-auto max-w-[1160px] px-6; }
+  .h2 { @apply font-display text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl; }
+}
